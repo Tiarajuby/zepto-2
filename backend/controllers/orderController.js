@@ -70,7 +70,7 @@ const verifyOrder = async (req, res) => {
 
 const userOrders = async (req, res) => {
   try {
-    const orders = await orderModel.find({ userId: req.body.userId });
+    const orders = await orderModel.find({ userId: req.body.userId }).sort({ data: -1 }); 
     res.json({ success: true, data: orders });
   } catch (error) {
     console.log(error);
