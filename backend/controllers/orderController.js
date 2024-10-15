@@ -11,7 +11,7 @@ const razorpay = new Razorpay({
 
 // Placing user order for frontend
 const placeOrder = async (req, res) => {
-  const frontend_url = 'http://localhost:5173';
+  const frontend_url = 'https://zepto-2.vercel.app/';
   try {
     const newOrder = new orderModel({
       userId: req.body.userId,
